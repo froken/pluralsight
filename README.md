@@ -1,5 +1,4 @@
-# pluralsight
-Exercise files for some pluralsight courses
+This project contains the exercise files for some pluralsight courses
 
 ## react.flux
 
