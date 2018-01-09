@@ -29249,6 +29249,31 @@ module.exports = About;
 },{"create-react-class":2,"react":30}],33:[function(require,module,exports){
 'use strict';
 
+var createReactClass = require('create-react-class');
+var React = require('react');
+
+var Header = createReactClass({
+  render: function () {
+    return (
+      React.createElement("nav", {className: "navbar navbar-default"}, 
+        React.createElement("div", {className: "container-fluid"}, 
+          React.createElement("a", {href: "/", className: "navbar-brand"}, 
+            React.createElement("img", {src: "images/logo.png"})
+          ), 
+          React.createElement("ul", {className: "nav navbar-nav"}, 
+            React.createElement("li", null, React.createElement("a", {href: "/"}, "Home")), 
+            React.createElement("li", null, React.createElement("a", {href: "/#about"}, "About"))
+          )
+        )
+      )
+    );
+  }
+});
+
+module.exports = Header;
+},{"create-react-class":2,"react":30}],34:[function(require,module,exports){
+'use strict';
+
 var createReactClass = require('create-react-class')
 var React = require('react')
 
@@ -29264,13 +29289,14 @@ var Home = createReactClass({
 })
 
 module.exports = Home
-},{"create-react-class":2,"react":30}],34:[function(require,module,exports){
+},{"create-react-class":2,"react":30}],35:[function(require,module,exports){
 $ = jQuery = require('jquery');
 
 var React = require('react');
 var ReactDOM = require('react-dom');
 var Home = require('./components/homePage');
 var About = require('./components/about/aboutPage');
+var Header = require('./components/common/header');
 var createReactClass = require('create-react-class');
 
 var App = createReactClass({
@@ -29284,6 +29310,7 @@ var App = createReactClass({
 
         return (
           React.createElement("div", null, 
+            React.createElement(Header, null), 
             React.createElement(Child, null)
           )
         );
@@ -29297,4 +29324,4 @@ function render() {
 
 window.addEventListener('hashchange', render);
 render();
-},{"./components/about/aboutPage":32,"./components/homePage":33,"create-react-class":2,"jquery":20,"react":30,"react-dom":26}]},{},[34]);
+},{"./components/about/aboutPage":32,"./components/common/header":33,"./components/homePage":34,"create-react-class":2,"jquery":20,"react":30,"react-dom":26}]},{},[35]);
