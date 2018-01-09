@@ -10,6 +10,5 @@
     "globals": {
         "jQuery" : true,
 		"$": true
-    },
-    "extends": ["standard", "standard-react"]
+    }
 }

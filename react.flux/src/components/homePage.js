@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var createReactClass = require('create-react-class')
 var React = require('react')
